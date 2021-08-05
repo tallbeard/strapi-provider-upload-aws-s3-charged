@@ -1,0 +1,47 @@
+{
+  "name": "strapi-provider-upload-aws-s3-charged",
+  "version": "3.6.6",
+  "description": "AWS S3 provider for strapi upload",
+  "homepage": "https://github.com/tallbeard/strapi-provider-upload-aws-s3-charged",
+  "keywords": [
+    "upload",
+    "aws",
+    "s3",
+    "strapi"
+  ],
+  "directories": {
+    "lib": "./lib"
+  },
+  "main": "./lib",
+  "dependencies": {
+    "aws-sdk": "2.892.0",
+    "lodash": "4.17.21"
+  },
+  "strapi": {
+    "isProvider": true
+  },
+  "author": {
+    "name": "Tållbeard Team",
+    "email": "alex@tallbeard.studio",
+    "url": "https://tallbeard.studio"
+  },
+  "maintainers": [
+    {
+      "name": "Tållbeard Team",
+      "email": "alex@tallbeard.studio",
+      "url": "https://tallbeard.studio"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/tallbeard/strapi-provider-upload-aws-s3-charged.git"
+  },
+  "engines": {
+    "node": ">=10.16.0 <=14.x.x",
+    "npm": ">=6.0.0"
+  },
+  "license": "SEE LICENSE IN LICENSE",
+  "scripts": {
+    "test": "echo \"no tests yet\""
+  }
+}
