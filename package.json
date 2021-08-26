@@ -1,6 +1,6 @@
 {
   "name": "strapi-provider-upload-aws-s3-charged",
-  "version": "3.6.7",
+  "version": "3.6.8",
   "description": "AWS S3 provider for strapi upload",
   "homepage": "https://github.com/tallbeard/strapi-provider-upload-aws-s3-charged",
   "keywords": [
