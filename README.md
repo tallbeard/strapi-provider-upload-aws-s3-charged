@@ -19,6 +19,9 @@ module.exports = ({ env }) => ({
       accessKeyId: env('AWS_ACCESS_KEY_ID'),
       secretAccessKey: env('AWS_ACCESS_SECRET'),
       region: env('AWS_REGION'),
+      acl: env('AWS_ACL'), // one of ["private", "public-read", "public-read-write", "authenticated-read", "bucket-owner-read", "bucket-owner-full-control"]
+      customDomain: env('CUSTOM_DOMAIN'),
+      pathPrefix: env('UPLOAD_FOLDER'), // with trailing slash
       params: {
         Bucket: env('AWS_BUCKET'),
       },
