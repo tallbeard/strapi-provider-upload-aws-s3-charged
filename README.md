@@ -1,5 +1,26 @@
 # strapi-provider-upload-aws-s3-charged
 
+## Resources
+
+- [LICENSE](LICENSE)
+
+## Links
+
+- [Strapi website](https://strapi.io/)
+- [Strapi documentation](https://docs.strapi.io)
+- [Strapi community on Discord](https://discord.strapi.io)
+- [Strapi news on Twitter](https://twitter.com/strapijs)
+
+## Installation
+
+```bash
+# using yarn
+yarn add @strapi/provider-upload-aws-s3-charged
+
+# using npm
+npm install @strapi/provider-upload-aws-s3-charged --save
+```
+
 ## Configurations
 
 Your configuration is passed down to the provider. (e.g: `new AWS.S3(config)`). You can see the complete list of options [here](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/S3.html#constructor-property)
@@ -33,7 +54,7 @@ module.exports = ({ env }) => ({
 
 ## Required AWS Policy Actions
 These are the minimum amount of permissions needed for this provider to work. 
-```
+```json
 "Action": [
   "s3:PutObject",
   "s3:GetObject",
@@ -42,13 +63,3 @@ These are the minimum amount of permissions needed for this provider to work.
   "s3:PutObjectAcl"
 ],
 ```
-
-## Resources
-
-- [License](LICENSE)
-
-## Links
-
-- [Strapi website](https://strapi.io/)
-- [Strapi community on Slack](https://slack.strapi.io)
-- [Strapi news on Twitter](https://twitter.com/strapijs)
