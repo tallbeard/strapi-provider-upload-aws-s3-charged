@@ -52,6 +52,33 @@ module.exports = ({ env }) => ({
 });
 ```
 
+### Security Middleware Configuration
+
+Due to the default settings in the Strapi Security Middleware you will need to modify the `contentSecurityPolicy` settings to properly see thumbnail previews in the Media Library. You should replace `strapi::security` string with the object bellow instead as explained in the [middleware configuration](https://docs.strapi.io/developer-docs/latest/setup-deployment-guides/configurations/required/middlewares.html#loading-order) documentation.
+
+`./config/middlewares.js`
+
+```js
+module.exports = [
+  // ...
+  {
+    name: "strapi::security",
+    config: {
+      contentSecurityPolicy: {
+        useDefaults: true,
+        directives: {
+          "connect-src": ["'self'", "https:"],
+          "img-src": ["'self'", "data:", "blob:", "yourBucketName.s3.yourRegion.amazonaws.com"],
+          "media-src": ["'self'", "data:", "blob:", "yourBucketName.s3.yourRegion.amazonaws.com"],
+          upgradeInsecureRequests: null,
+        },
+      },
+    },
+  },
+  // ...
+];
+```
+
 ## Required AWS Policy Actions
 These are the minimum amount of permissions needed for this provider to work. 
 ```json
